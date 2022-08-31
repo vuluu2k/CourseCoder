@@ -56,10 +56,7 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      Splash.hide();
-    }, 1000);
-    return () => clearTimeout(timer);
+    Splash.hide();
   }, []);
 
   const isDarkMode = useColorScheme() === 'dark';
